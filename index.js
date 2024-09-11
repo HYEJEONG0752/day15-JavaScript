@@ -17,6 +17,7 @@ const person1 = {
   };
 
   person1.sayHello();  // Hello, I am Alice.
+  person1["sayHello"]();  // Hello, I am Alice.
 
 // 4. 객체 person 메소드 greet 추가 -> "Hi, I'm [name]"출력
 
@@ -27,13 +28,14 @@ const person2 = { name: "Bob",
 };
 
 person2.greet();  // Hi,I'm Bob.
+person2["greet"]();  // Hi,I'm Bob.
 
 // 5. 생성자 함수-이름,나이를 속성으로 가진 person객체 만들기(이름"John",나이 30)
 function person3(name, age) {
     this.name = name;
     this.age = age;
 }
-const john = new person3("John",30)
+const john = new person3("John",30);
 
 console.log(john);  // person3 { name: 'John', age: 30 }
 
